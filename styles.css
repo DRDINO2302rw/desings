@@ -350,3 +350,33 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        margin-left: 0; /* Elimina el margen negativo */
+        padding: 10px; /* Ajusta el padding */
+    }
+
+    .connect-wallet {
+        margin-left: 0; /* Elimina el margen negativo */
+    }
+
+    .hero {
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    .hero-image img {
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+        height: auto;
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    .stats {
+        margin-left: 0; /* Elimina el margen negativo */
+        align-items: center;
+    }
+
+    .redes {
+        justify-content: center; /* Centra los íconos de redes sociales */
+    }
+}
