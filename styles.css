@@ -485,3 +485,67 @@ footer {
     }
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    animation: appear 0.5s forwards;
+    max-width: 95%; /* Limita el ancho máximo */
+    max-height: 85%; /* Limita la altura máxima */
+    overflow-y: auto; /* Añade desplazamiento vertical si es necesario */
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 60vh; /* Ajusta la altura máxima para dispositivos más pequeños */
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 10px; /* Ajusta el padding en pantallas pequeñas */
+        max-width: 90%; /* Reduce el ancho máximo */
+        max-height: 80%; /* Reduce la altura máxima */
+        border-radius: 8px; /* Ajusta el borde redondeado */
+    }
+
+    .modal-content img {
+        max-height: 50vh; /* Reduce la altura máxima de las imágenes en dispositivos pequeños */
+        border-radius: 8px; /* Ajusta el borde redondeado de la imagen */
+    }
+
+    .close {
+        font-size: 20px; /* Ajusta el tamaño de la fuente del botón de cierre */
+        top: 5px; /* Ajusta la posición del botón de cierre */
+        right: 10px;
+    }
+}
+
+
