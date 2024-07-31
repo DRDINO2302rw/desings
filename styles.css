@@ -351,32 +351,77 @@ footer {
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    header {
-        margin-left: 0; /* Elimina el margen negativo */
-        padding: 10px; /* Ajusta el padding */
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .stats h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
     }
 
     .connect-wallet {
-        margin-left: 0; /* Elimina el margen negativo */
+        font-size: 14px;
+        padding: 6px 12px;
     }
 
-    .hero {
-        padding: 20px; /* Ajusta el padding */
+    .carousel-track {
+        flex-wrap: nowrap;
     }
 
-    .hero-image img {
-        max-width: 100%; /* Asegura que la imagen no se desborde */
-        height: auto;
-        margin: 0 auto; /* Centra la imagen */
+    .carousel-track-container {
+        width: 100%;
     }
 
-    .stats {
-        margin-left: 0; /* Elimina el margen negativo */
+    .carousel-button {
+        font-size: 18px;
+    }
+
+    .carousel-controls button:hover {
+        transform: scale(1);
+    }
+
+    /* Ajustes específicos para el header en móviles */
+    header {
+        flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
 
-    .redes {
-        justify-content: center; /* Centra los íconos de redes sociales */
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .connect-wallet {
+        margin-top: 10px;
+        padding: 8px 16px;
     }
 }
+
