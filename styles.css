@@ -382,20 +382,80 @@ footer {
         padding: 6px 12px;
     }
 
+   /* Ajustes generales */
+    .carousel {
+        overflow: hidden;
+    }
+
     .carousel-track {
-        flex-wrap: nowrap;
+        display: flex;
+        transition: transform 0.5s ease;
+        will-change: transform;
     }
 
     .carousel-track-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+    }
+
+    .carousel-slide img {
         width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .carousel-button {
-        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
     }
 
-    .carousel-controls button:hover {
-        transform: scale(1);
+    .carousel-button.left {
+        left: 10px;
+    }
+
+    .carousel-button.right {
+        right: 10px;
+    }
+
+    /* Ocultar botones de navegación en móviles */
+    .carousel-button {
+        display: none;
+    }
+
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 0 4px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+
+    .carousel-indicator.active {
+        background-color: #f00;
     }
 
     /* Ajustes específicos para el header en móviles */
